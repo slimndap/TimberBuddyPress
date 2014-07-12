@@ -2,33 +2,24 @@
 	class Timber_BuddyPress {
 		
 		function __construct() {
-			add_filter('timber_post_getter_posts', array($this,'timber_post_getter_posts'));
+			add_action('timber_post_init',array($this,'timber_post_init'));
 		}
 
 		/*
-		 * Inject BuddyPress content into TimberPost.
+		 * Trick BuddyPress to think we are in the loop.
 		 *
-		 * If BuddyPress detects a page that has BuddyPress content it bypasses the content loop, 
-		 * replacing it with BuddyPress content. 
-		 * This causes TimberPostGetter::get_posts to always return a single post without content.
+		 * Whenever BuddyPress detects a page that has BuddyPress content it wipes all posts from wp_query.
+		 * It then adds a new post with the BuddyPress content.
+		 * This however relies on being in the loop, which isn't used by Timber.
+		 *
 		 */
 
-		function timber_post_getter_posts($posts) {
+		function timber_post_init($post) {
 			global $wp_query;
 
 			if (is_buddypress()) {
-
-				/*
-				 * Trick BuddyPress to think we are in the loop
-				 */
-				$wp_query->in_the_loop = true;
-				
-				/*
-				 * Inject BuddyPress content
-				 */
-				$posts[0]->content = apply_filters('the_content',get_the_content());
+				$wp_query->in_the_loop = true;				
 			}
-			return $posts;
 		}
 
 	}
