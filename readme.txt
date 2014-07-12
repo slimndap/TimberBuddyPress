@@ -1,7 +1,9 @@
 === BuddyPress for Timber ===
 Contributors: slimndap
 Tags: buddypress, timber, twig
+Requires at least: 3.9
 Tested up to: 4.0
+Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -11,6 +13,7 @@ Create BuddyPress websites using Twig templates.
 
 Make the Timber plugin work with BuddyPress. Create BuddyPress themes with the power of Twig templates and all other goodies that come with Timber.
 
+Requires Timber v x.x.x.
 
 == Installation ==
 
