@@ -4,7 +4,7 @@
 Plugin Name: BuddyPress for Timber
 Plugin URI:  https://github.com/slimndap/TimberBuddyPress
 Description: Add Buddypress support to the Timber plugin.
-Version: 1.0
+Version: 1.1
 Author: Jeroen Schmit, Slim & Dapper
 */
 

@@ -1,8 +1,8 @@
 === BuddyPress for Timber ===
-Contributors: slimndap
+Contributors: slimndap, mennolui
 Tags: buddypress, timber, twig
 Requires at least: 3.9
-Tested up to: 4.0
+Tested up to: 4.3
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -27,3 +27,7 @@ Requires Timber v x.x.x.
 = 1.0 =
 
 * And we're live!
+
+= 1.1 =
+
+* Made it work with newer versions of the Timber plugin, while remaining backward compatible.
